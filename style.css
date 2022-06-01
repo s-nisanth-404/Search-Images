@@ -1,0 +1,75 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 10em;
+    list-style: none;
+}
+
+li {
+    font-size: 30px;
+    font-family: fantasy;
+    cursor: pointer;
+    
+}
+
+li::after {
+    content: '';
+    display: block;
+    height: 5px;
+    background: orange;
+    width: 0;
+    margin: auto;
+    transition: all 0.5s ease;
+}
+
+li:hover::after {
+    width: 100%;
+}
+
+img {
+    height: 20rem;
+    width: 20rem;
+    padding: 10px;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+
+img:hover {
+    padding: 0;
+    box-shadow: 0 0 8px 2px;
+}
+
+.Image {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: space-around;
+    }
+
+.active {
+    color: darkgrey;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    animation: animate 0.4s ease;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
